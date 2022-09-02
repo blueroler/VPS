@@ -1,4 +1,4 @@
-name: VPS3
+name: VPS6
 
 on: workflow_dispatch
 
@@ -17,9 +17,9 @@ jobs:
     - name: Extracting Ngrok Files
       run: Expand-Archive ngrok.zip
     - name: Connect To Ngrok Account
-      run: .\ngrok\ngrok.exe authtoken $Env:HUNG
+      run: .\ngrok\ngrok.exe authtoken $Env:NHUT
       env:
-        HUNG: ${{ secrets.HUNG }}
+        NHUT: ${{ secrets.NHUT }}
     - name: Enable RDP Access
       run: | 
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
