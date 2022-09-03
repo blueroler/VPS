@@ -1,0 +1,11 @@
+name: all
+run: VPS0.yml
+run: VPS1.yml
+run: VPS2.yml
+run: VPS3.yml
+run: VPS4.yml
+run: VPS5.yml
+run: VPS6.yml
+run: VPS7.yml
+run: VPS8.yml
+run: VPS9.yml
