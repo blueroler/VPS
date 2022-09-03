@@ -1,4 +1,4 @@
-name: all
+name: VPS0
 
 on: workflow_dispatch
 
@@ -9,27 +9,39 @@ jobs:
     timeout-minutes: 9999
 
     steps:
-    - name: Download
+    - name: Download Ngrok
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/VPS/main/.github/workflows/VPS0.yml
-        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/VPS/main/.github/workflows/VPS1.yml
-        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/VPS/main/.github/workflows/VPS2.yml
-        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/VPS/main/.github/workflows/VPS3.yml
-        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/VPS/main/.github/workflows/VPS4.yml
-        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/VPS/main/.github/workflows/VPS5.yml
-        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/VPS/main/.github/workflows/VPS6.yml
-        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/VPS/main/.github/workflows/VPS7.yml
-        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/VPS/main/.github/workflows/VPS8.yml
-        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/VPS/main/.github/workflows/VPS9.yml
-    - name: run all
-      run:  |
-        VPS0.yml
-        VPS1.yml
-        VPS2.yml
-        VPS3.yml
-        VPS4.yml
-        VPS5.yml
-        VPS6.yml
-        VPS7.yml
-        VPS8.yml
-        VPS9.yml
+        Invoke-WebRequest https://github.com/blueroler/RDP_main/blob/main/ngrok.zip?raw=true -OutFile ngrok.zip
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/RDP_main/main/start.bat -OutFile start.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/RDP_main/main/loop.bat -OutFile loop.bat
+    - name: Extracting Ngrok Files
+      run: Expand-Archive ngrok.zip
+    - name: Connect To Ngrok Account 1
+      run: .\ngrok\ngrok.exe authtoken $Env:CHIEN
+      env:
+        CHIEN: ${{ secrets.CHIEN }}
+    - name: Enable RDP Access
+      run: | 
+        Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
+        Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+        Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
+    - name: Create Tunnels
+      run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp --region ap 3389"'
+    - name: Connect to your RDP
+      run: cmd /c start.bat
+
+    - name: Connect To Ngrok Account 2
+      run: .\ngrok\ngrok.exe authtoken $Env:FUCK
+      env:
+        FUCK: ${{ secrets.FUCK }}
+    - name: Enable RDP Access
+      run: | 
+        Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
+        Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+        Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
+    - name: Create Tunnels
+      run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp --region ap 3389"'
+    - name: Connect to your RDP
+      run: cmd /c start.bat
+    - name: Made Successfully! You Can Close Tab Now
+      run: cmd /c loop.bat
