@@ -31,7 +31,8 @@ jobs:
       run: cmd /c start.bat
     - name: Made Successfully! You Can Close Tab Now
       run: cmd /c loop.bat
-      
+
+jobs:
   build1:
 
     runs-on: windows-latest
