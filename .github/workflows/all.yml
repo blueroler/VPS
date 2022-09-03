@@ -1,4 +1,4 @@
-name: VPS0
+name: all
 
 on: workflow_dispatch
 
