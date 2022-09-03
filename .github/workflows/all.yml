@@ -1,0 +1,34 @@
+name: all
+
+on: workflow_dispatch
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+    timeout-minutes: 9999
+
+    steps:
+    - name: Download
+      run: |
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/VPS/main/.github/workflows/VPS0.yml
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/VPS/main/.github/workflows/VPS1.yml
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/VPS/main/.github/workflows/VPS2.yml
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/VPS/main/.github/workflows/VPS3.yml
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/VPS/main/.github/workflows/VPS4.yml
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/VPS/main/.github/workflows/VPS5.yml
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/VPS/main/.github/workflows/VPS6.yml
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/VPS/main/.github/workflows/VPS7.yml
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/VPS/main/.github/workflows/VPS8.yml
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/VPS/main/.github/workflows/VPS9.yml
+    - name: run all
+      run: VPS0.yml
+      run: VPS1.yml
+      run: VPS2.yml
+      run: VPS3.yml
+      run: VPS4.yml
+      run: VPS5.yml
+      run: VPS6.yml
+      run: VPS7.yml
+      run: VPS8.yml
+      run: VPS9.yml
