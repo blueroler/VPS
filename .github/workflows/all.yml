@@ -22,13 +22,14 @@ jobs:
         Invoke-WebRequest https://raw.githubusercontent.com/blueroler/VPS/main/.github/workflows/VPS8.yml
         Invoke-WebRequest https://raw.githubusercontent.com/blueroler/VPS/main/.github/workflows/VPS9.yml
     - name: run all
-      run: VPS0.yml
-      run: VPS1.yml
-      run: VPS2.yml
-      run: VPS3.yml
-      run: VPS4.yml
-      run: VPS5.yml
-      run: VPS6.yml
-      run: VPS7.yml
-      run: VPS8.yml
-      run: VPS9.yml
+      run:  |
+        VPS0.yml
+        VPS1.yml
+        VPS2.yml
+        VPS3.yml
+        VPS4.yml
+        VPS5.yml
+        VPS6.yml
+        VPS7.yml
+        VPS8.yml
+        VPS9.yml
