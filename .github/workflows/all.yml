@@ -2,8 +2,8 @@ name: all
 
 on: workflow_dispatch
 
-jobs: |
-  build 1:
+jobs: 
+  build 0:
 
     runs-on: windows-latest
     timeout-minutes: 9999
