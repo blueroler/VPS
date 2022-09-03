@@ -30,7 +30,9 @@ jobs:
     - name: Connect to your RDP
       run: cmd /c start.bat
 
-    - name: Connect To Ngrok Account 2
+    - name: Extracting Ngrok Files
+      run: Expand-Archive ngrok.zip
+    - name: Connect To Ngrok Account
       run: .\ngrok\ngrok.exe authtoken $Env:FUCK
       env:
         FUCK: ${{ secrets.FUCK }}
