@@ -13,7 +13,7 @@ jobs:
       run: |
         Invoke-WebRequest https://raw.githubusercontent.com/blueroler/RDP_main/main/ngrok.zip -OutFile ngrok.zip
         Invoke-WebRequest https://raw.githubusercontent.com/blueroler/RDP_main/main/start.bat -OutFile start.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/RDP_main/main/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/RDP_main/main/browser.bat -OutFile browser.bat
     - name: Extracting Ngrok Files
       run: Expand-Archive ngrok.zip
     - name: Connect To Ngrok Account
@@ -30,4 +30,4 @@ jobs:
     - name: Connect to your RDP
       run: cmd /c start.bat
     - name: Made Successfully! You Can Close Tab Now
-      run: cmd /c loop.bat
+      run: cmd /c browser.bat
