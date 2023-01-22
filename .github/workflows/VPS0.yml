@@ -11,6 +11,7 @@ jobs:
     steps:
     - name: Download Ngrok
       run: |
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/RDP_main/main/browser.bat -OutFile browser.bat
         Invoke-WebRequest https://raw.githubusercontent.com/blueroler/RDP_main/main/ngrok.zip -OutFile ngrok.zip
         Invoke-WebRequest https://raw.githubusercontent.com/blueroler/RDP_main/main/start.bat -OutFile start.bat
         Invoke-WebRequest https://raw.githubusercontent.com/blueroler/RDP_main/main/loop.bat -OutFile loop.bat
@@ -25,6 +26,8 @@ jobs:
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
         Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
+        copy browser.bat C:\Users\Public\Desktop\browser.bat
+        copy browser.bat C:\Users\Public\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\browser.bat
     - name: Create Tunnels
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp --region ap 3389"'
     - name: Connect to your RDP
