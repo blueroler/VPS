@@ -10,9 +10,9 @@ jobs:
     steps:
     - name: Download Ngrok
       run: |
-        Invoke-WebRequest https://github.com/blueroler/RDP_main/blob/main/ngrok.zip?raw=true -OutFile ngrok.zip
-        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/RDP_main/main/start.bat -OutFile start.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/RDP_main/main/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/Main_VPS/main/ngrok.zip -OutFile ngrok.zip
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/Main_VPS/main/start.bat -OutFile start.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/Main_VPS/main/loop.bat -OutFile loop.bat
     - name: Extracting Ngrok Files
       run: Expand-Archive ngrok.zip
     - name: Connect To Ngrok Account
@@ -38,9 +38,9 @@ jobs:
     steps:
     - name: Download Ngrok
       run: |
-        Invoke-WebRequest https://github.com/blueroler/RDP_main/blob/main/ngrok.zip?raw=true -OutFile ngrok.zip
-        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/RDP_main/main/start.bat -OutFile start.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/RDP_main/main/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/Main_VPS/main/ngrok.zip -OutFile ngrok.zip
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/Main_VPS/main/start.bat -OutFile start.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/Main_VPS/main/loop.bat -OutFile loop.bat
     - name: Extracting Ngrok Files
       run: Expand-Archive ngrok.zip
     - name: Connect To Ngrok Account
@@ -66,9 +66,9 @@ jobs:
     steps:
     - name: Download Ngrok
       run: |
-        Invoke-WebRequest https://github.com/blueroler/RDP_main/blob/main/ngrok.zip?raw=true -OutFile ngrok.zip
-        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/RDP_main/main/start.bat -OutFile start.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/RDP_main/main/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/Main_VPS/main/ngrok.zip -OutFile ngrok.zip
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/Main_VPS/main/start.bat -OutFile start.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/Main_VPS/main/loop.bat -OutFile loop.bat
     - name: Extracting Ngrok Files
       run: Expand-Archive ngrok.zip
     - name: Connect To Ngrok Account
@@ -94,9 +94,9 @@ jobs:
     steps:
     - name: Download Ngrok
       run: |
-        Invoke-WebRequest https://github.com/blueroler/RDP_main/blob/main/ngrok.zip?raw=true -OutFile ngrok.zip
-        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/RDP_main/main/start.bat -OutFile start.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/RDP_main/main/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/Main_VPS/main/ngrok.zip -OutFile ngrok.zip
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/Main_VPS/main/start.bat -OutFile start.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/Main_VPS/main/loop.bat -OutFile loop.bat
     - name: Extracting Ngrok Files
       run: Expand-Archive ngrok.zip
     - name: Connect To Ngrok Account
@@ -122,9 +122,9 @@ jobs:
     steps:
     - name: Download Ngrok
       run: |
-        Invoke-WebRequest https://github.com/blueroler/RDP_main/blob/main/ngrok.zip?raw=true -OutFile ngrok.zip
-        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/RDP_main/main/start.bat -OutFile start.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/RDP_main/main/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/Main_VPS/main/ngrok.zip -OutFile ngrok.zip
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/Main_VPS/main/start.bat -OutFile start.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/Main_VPS/main/loop.bat -OutFile loop.bat
     - name: Extracting Ngrok Files
       run: Expand-Archive ngrok.zip
     - name: Connect To Ngrok Account
@@ -150,9 +150,9 @@ jobs:
     steps:
     - name: Download Ngrok
       run: |
-        Invoke-WebRequest https://github.com/blueroler/RDP_main/blob/main/ngrok.zip?raw=true -OutFile ngrok.zip
-        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/RDP_main/main/start.bat -OutFile start.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/RDP_main/main/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/Main_VPS/main/ngrok.zip -OutFile ngrok.zip
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/Main_VPS/main/start.bat -OutFile start.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/Main_VPS/main/loop.bat -OutFile loop.bat
     - name: Extracting Ngrok Files
       run: Expand-Archive ngrok.zip
     - name: Connect To Ngrok Account
@@ -178,9 +178,9 @@ jobs:
     steps:
     - name: Download Ngrok
       run: |
-        Invoke-WebRequest https://github.com/blueroler/RDP_main/blob/main/ngrok.zip?raw=true -OutFile ngrok.zip
-        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/RDP_main/main/start.bat -OutFile start.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/RDP_main/main/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/Main_VPS/main/ngrok.zip -OutFile ngrok.zip
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/Main_VPS/main/start.bat -OutFile start.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/Main_VPS/main/loop.bat -OutFile loop.bat
     - name: Extracting Ngrok Files
       run: Expand-Archive ngrok.zip
     - name: Connect To Ngrok Account
@@ -206,9 +206,9 @@ jobs:
     steps:
     - name: Download Ngrok
       run: |
-        Invoke-WebRequest https://github.com/blueroler/RDP_main/blob/main/ngrok.zip?raw=true -OutFile ngrok.zip
-        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/RDP_main/main/start.bat -OutFile start.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/RDP_main/main/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/Main_VPS/main/ngrok.zip -OutFile ngrok.zip
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/Main_VPS/main/start.bat -OutFile start.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/Main_VPS/main/loop.bat -OutFile loop.bat
     - name: Extracting Ngrok Files
       run: Expand-Archive ngrok.zip
     - name: Connect To Ngrok Account
@@ -234,9 +234,9 @@ jobs:
     steps:
     - name: Download Ngrok
       run: |
-        Invoke-WebRequest https://github.com/blueroler/RDP_main/blob/main/ngrok.zip?raw=true -OutFile ngrok.zip
-        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/RDP_main/main/start.bat -OutFile start.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/RDP_main/main/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/Main_VPS/main/ngrok.zip -OutFile ngrok.zip
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/Main_VPS/main/start.bat -OutFile start.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/Main_VPS/main/loop.bat -OutFile loop.bat
     - name: Extracting Ngrok Files
       run: Expand-Archive ngrok.zip
     - name: Connect To Ngrok Account
@@ -262,9 +262,9 @@ jobs:
     steps:
     - name: Download Ngrok
       run: |
-        Invoke-WebRequest https://github.com/blueroler/RDP_main/blob/main/ngrok.zip?raw=true -OutFile ngrok.zip
-        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/RDP_main/main/start.bat -OutFile start.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/RDP_main/main/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/Main_VPS/main/ngrok.zip -OutFile ngrok.zip
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/Main_VPS/main/start.bat -OutFile start.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/blueroler/Main_VPS/main/loop.bat -OutFile loop.bat
     - name: Extracting Ngrok Files
       run: Expand-Archive ngrok.zip
     - name: Connect To Ngrok Account
